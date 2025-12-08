@@ -14,9 +14,9 @@ export const DeliverySection: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-brand-light/5 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 mb-24 items-stretch">
           {/* Text Content - Optimized Layout */}
-          <div className="lg:w-1/2 order-2 lg:order-1 space-y-6">
+          <div className="lg:w-full order-2 lg:order-1 space-y-6 h-full flex flex-col">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-light">
               Lorem Ipsum
             </h2>
@@ -44,13 +44,13 @@ export const DeliverySection: React.FC = () => {
           </div>
 
           {/* Video Embed */}
-          <div className="lg:w-1/2 relative order-1 lg:order-2 w-full max-w-2xl mx-auto">
+          <div className="lg:w-full relative order-1 lg:order-2 w-full max-w-2xl lg:max-w-full mx-auto h-full flex">
             <div className="absolute inset-0 bg-brand-red rounded-2xl rotate-3 transform translate-x-4 translate-y-4 z-0 opacity-50" />
 
-            <div className="relative z-10 w-full drop-shadow-2xl">
+            <div className="relative z-10 w-full drop-shadow-2xl h-full">
               <VideoPlayer
                 videoId="u7iH2dRmwDQ"
-                className="aspect-video"
+                className="w-full h-full min-h-[480px]"
                 start={4}
                 title="Palestra Branca Barão - Minha Entrega"
               />
