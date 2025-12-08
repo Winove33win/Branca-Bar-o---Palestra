@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 interface VideoPlayerProps {
   videoId: string;
@@ -13,7 +13,16 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   className = "",
   start = 0,
 }) => {
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&start=${start}`;
+  const normalizedId = useMemo(() => {
+    const match = videoId.match(
+      /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([\w-]{11})/
+    );
+    return match ? match[1] : videoId;
+  }, [videoId]);
+
+  const safeStart = Number.isFinite(start) && start > 0 ? start : 0;
+
+  const embedUrl = `https://www.youtube.com/embed/${normalizedId}?rel=0&modestbranding=1&start=${safeStart}`;
 
   return (
     <div className={`relative w-full overflow-hidden bg-black rounded-2xl shadow-2xl border border-white/10 group ${className}`}>
@@ -24,6 +33,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
+        loading="lazy"
         allowFullScreen
       />
     </div>
