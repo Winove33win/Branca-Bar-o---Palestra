@@ -25,9 +25,6 @@ export const Hero: React.FC = () => {
 
 
       <div className="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-start justify-start min-h-[75vh] md:min-h-[80vh]">
-        <div className="w-full md:w-1/2 lg:w-[45%] pt-4 md:pt-6 self-start">
-
-      <div className="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-start min-h-[75vh] md:min-h-[80vh]">
         <div className="w-full md:w-1/2 lg:w-[45%] pt-6 md:pt-8 self-start">
 
           <div className="inline-block px-3 py-1 border border-brand-green/30 rounded-full bg-brand-green/10 mb-6 backdrop-blur-sm">
