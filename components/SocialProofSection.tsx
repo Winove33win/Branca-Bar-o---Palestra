@@ -46,29 +46,37 @@ export const SocialProofSection: React.FC = () => {
     <section id="depoimentos" className="py-20">
       <div className="container mx-auto px-6">
         <div className="bg-white text-brand-dark rounded-[32px] shadow-2xl border border-white/70 px-6 md:px-12 py-12">
-          <div className="grid gap-12 lg:grid-cols-3 text-center">
+          <div className="grid gap-10 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="flex flex-col items-center gap-6 px-2">
-                <div className="flex items-center justify-center w-full min-h-[72px]">
+              <div
+                key={testimonial.id}
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-dark/10 bg-white/90 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-brand-red/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+              >
+                <div className="flex flex-1 flex-col gap-4 px-6 pb-6 pt-8">
+                  <div className="mx-auto h-1 w-14 rounded-full bg-brand-red/70" />
+                  <p className="text-base leading-relaxed text-brand-textDark/90 font-medium">
+                    {testimonial.quote}
+                  </p>
+                  <div className="text-sm text-brand-textDark font-semibold uppercase tracking-wide">
+                    {testimonial.author}
+                  </div>
+                </div>
+                <div className="flex items-center justify-center border-t border-brand-dark/10 bg-brand-light/60 px-6 py-6">
                   {testimonial.logo.type === 'image' ? (
                     <img
                       src={testimonial.logo.value}
                       alt={`Logo ${testimonial.company}`}
-                      className="h-full w-full object-contain"
+                      className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   ) : (
                     <a
                       href={testimonial.logo.link}
-                      className="text-2xl font-serif font-bold tracking-wide text-brand-dark text-center w-full"
+                      className="text-2xl font-serif font-bold tracking-wide text-brand-dark text-center transition-transform duration-300 group-hover:scale-105"
                     >
                       {testimonial.logo.value}
                     </a>
                   )}
                 </div>
-                <p className="text-base leading-relaxed text-brand-textDark/90 font-medium">
-                  {testimonial.quote}
-                </p>
-                <div className="text-sm text-brand-textDark font-semibold">{testimonial.author}</div>
               </div>
             ))}
           </div>
