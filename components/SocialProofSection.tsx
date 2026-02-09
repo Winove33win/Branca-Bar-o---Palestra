@@ -45,53 +45,38 @@ export const SocialProofSection: React.FC = () => {
   return (
     <section
       id="depoimentos"
-      className="py-24 text-white relative overflow-hidden"
-      style={{ backgroundColor: '#130039' }}
+      className="py-24 text-white relative overflow-hidden bg-center bg-cover"
+      style={{ backgroundImage: `url(${depoimentosBackground})` }}
     >
+      <div className="absolute inset-0 bg-brand-dark/60" />
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-brand-light mb-4">
-            Depoimentos de empresas
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Experiências reais de quem viveu a energia da Branca Barão.
-          </p>
-        </div>
-
-        <div className="grid gap-10 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-6 backdrop-blur-sm shadow-lg"
-            >
-              <div className="flex items-center justify-center w-full min-h-[72px]">
-                {testimonial.logo.type === 'image' ? (
-                  <img
-                    src={testimonial.logo.value}
-                    alt={`Logo ${testimonial.company}`}
-                    className="h-full w-full object-contain"
-                  />
-                ) : (
-                  <a
-                    href={testimonial.logo.link}
-                    className="text-2xl font-serif font-bold tracking-wide text-brand-light text-center w-full"
-                  >
-                    {testimonial.logo.value}
-                  </a>
-                )}
+        <div className="bg-white text-brand-dark rounded-[32px] shadow-2xl border border-white/70 px-6 md:px-12 py-12">
+          <div className="grid gap-12 lg:grid-cols-3 text-center">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="flex flex-col items-center gap-6 px-2">
+                <div className="flex items-center justify-center w-full min-h-[72px]">
+                  {testimonial.logo.type === 'image' ? (
+                    <img
+                      src={testimonial.logo.value}
+                      alt={`Logo ${testimonial.company}`}
+                      className="h-full w-full object-contain"
+                    />
+                  ) : (
+                    <a
+                      href={testimonial.logo.link}
+                      className="text-2xl font-serif font-bold tracking-wide text-brand-dark text-center w-full"
+                    >
+                      {testimonial.logo.value}
+                    </a>
+                  )}
+                </div>
+                <p className="text-base leading-relaxed text-brand-textDark/90 font-medium">
+                  {testimonial.quote}
+                </p>
+                <div className="text-sm text-brand-textDark font-semibold">{testimonial.author}</div>
               </div>
-              <p className="text-sm leading-relaxed text-gray-200">“{testimonial.quote}”</p>
-              <div className="text-sm text-brand-green font-semibold">{testimonial.author}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16">
-          <img
-            src={depoimentosBackground}
-            alt="Mosaico de depoimentos"
-            className="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl border border-white/10"
-          />
+            ))}
+          </div>
         </div>
       </div>
     </section>
