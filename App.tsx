@@ -3,10 +3,11 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 import { IntroSection } from './components/IntroSection';
-import { DeliverySection } from './components/DeliverySection';
-import { TransformationSection } from './components/TransformationSection';
+import { SessionThreeSection } from './components/SessionThreeSection';
+import { ImpactSection } from './components/ImpactSection';
 import { SocialProofSection } from './components/SocialProofSection';
 import { BioSection } from './components/BioSection';
+import { LogosSection } from './components/LogosSection';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -21,10 +22,11 @@ function App() {
       <Hero />
       <Marquee />
       <IntroSection />
-      <DeliverySection />
-      <TransformationSection />
+      <SessionThreeSection />
+      <ImpactSection />
       <SocialProofSection />
       <BioSection />
+      <LogosSection />
       <Footer />
       
       {/* Sticky Mobile CTA - Visible only on small screens */}
