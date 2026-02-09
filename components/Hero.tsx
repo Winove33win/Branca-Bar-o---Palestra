@@ -3,6 +3,7 @@ import React from 'react';
 import { HERO_DATA } from '../constants';
 import { Button } from './Button';
 import { ChevronDown } from 'lucide-react';
+import heroImage from '../assets/imagem-sessão-hero.png';
 
 export const Hero: React.FC = () => {
   return (
@@ -12,9 +13,9 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/30 z-10 pointer-events-none" />
       
       {/* Hero Image Background */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://tse4.mm.bing.net/th/id/OIP.16a1h0J5VA8vzViJ5M1C8AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3")' }} 
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-brand-red/20 mix-blend-overlay"></div>
       </div>
@@ -24,14 +25,15 @@ export const Hero: React.FC = () => {
           
           <div className="inline-block px-3 py-1 border border-brand-green/30 rounded-full bg-brand-green/10 mb-6 backdrop-blur-sm">
             <span className="text-brand-green text-xs font-bold tracking-[0.2em] uppercase">
-              Lorem Ipsum
+              Palestra
             </span>
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 text-white drop-shadow-2xl">
-            Lorem ipsum dolor, <br/>
+            Desperto o <span className="text-brand-green">BRILHO</span>
+            <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-white font-light italic">
-              sit amet consectetur.
+              que sempre foi SEU,
             </span>
           </h1>
           
@@ -48,7 +50,7 @@ export const Hero: React.FC = () => {
                 <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/5 backdrop-blur-sm">
                    <div className="w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-t-white border-r-[6px] border-r-transparent ml-0.5 rotate-[-90deg]"></div>
                 </div>
-                <span className="text-sm font-medium text-white tracking-wide">Lorem Ipsum</span>
+                <span className="text-sm font-medium text-white tracking-wide">Conheça a palestra</span>
              </div>
           </div>
         </div>
@@ -59,7 +61,7 @@ export const Hero: React.FC = () => {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce-slow text-brand-light/70 flex flex-col items-center">
-        <span className="text-[10px] uppercase tracking-widest mb-2">Lorem Ipsum</span>
+        <span className="text-[10px] uppercase tracking-widest mb-2">Role para ver mais</span>
         <ChevronDown size={24} />
       </div>
     </section>
