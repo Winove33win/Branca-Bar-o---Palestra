@@ -9,8 +9,8 @@ export const SessionThreeSection: React.FC = () => {
       className="min-h-screen bg-brand-dark text-white bg-center bg-cover"
       style={{ backgroundImage: `url(${sessionThreeImage})` }}
     >
-      <div className="min-h-screen flex items-center">
-        <div className="container mx-auto px-6">
+      <div className="min-h-screen flex items-start">
+        <div className="container mx-auto px-6 pt-16 md:pt-24">
           <div className="max-w-xl md:max-w-2xl lg:max-w-[600px]">
             <div className="text-6xl md:text-7xl text-white/90 font-serif leading-none mb-4">“</div>
             <p className="text-2xl md:text-4xl font-serif leading-relaxed text-white drop-shadow-lg">
