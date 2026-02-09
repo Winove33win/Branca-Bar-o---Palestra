@@ -11,13 +11,17 @@ export const SessionThreeSection: React.FC = () => {
     >
       <div className="min-h-screen flex items-center">
         <div className="container mx-auto px-6">
-          <div className="max-w-xl md:max-w-2xl lg:max-w-[520px] bg-brand-dark/75 backdrop-blur-sm p-6 md:p-10 rounded-2xl">
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-brand-light">
-              A autenticidade é o elemento mais potente para destravar nossos melhores resultados no
-              trabalho e na vida!
+          <div className="max-w-xl md:max-w-2xl lg:max-w-[600px]">
+            <div className="text-6xl md:text-7xl text-white/90 font-serif leading-none mb-4">“</div>
+            <p className="text-2xl md:text-4xl font-serif leading-relaxed text-white drop-shadow-lg">
+              A <span className="text-[#ff3b8d] font-semibold">autenticidade</span> é o elemento{' '}
+              <span className="text-[#ff3b8d] font-semibold">mais potente</span> para destravar nossos{' '}
+              <span className="text-[#ff3b8d] font-semibold">melhores resultados</span> no trabalho e na
+              vida!
             </p>
-            <p className="mt-6 text-lg md:text-xl text-gray-200 leading-relaxed">
-              E isso não é sobre estilo, é sobre a sua maior fonte de energia!
+            <p className="mt-6 text-lg md:text-2xl text-white/90 leading-relaxed drop-shadow-lg">
+              E isso <span className="text-[#ff3b8d] font-semibold">não</span> é sobre estilo, é sobre a
+              sua <span className="text-[#ff3b8d] font-semibold">maior fonte de energia</span>!
             </p>
           </div>
         </div>
