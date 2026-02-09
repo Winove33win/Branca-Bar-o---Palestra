@@ -65,7 +65,7 @@ export const SocialProofSection: React.FC = () => {
           </div>
         </div>
         <div
-          className="mt-10 h-64 md:h-80 lg:h-96 bg-no-repeat bg-center bg-cover"
+          className="mt-10 w-full min-h-screen bg-no-repeat bg-center bg-cover"
           style={{ backgroundImage: `url(${depoimentosBackground})` }}
         />
       </div>
