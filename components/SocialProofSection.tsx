@@ -43,42 +43,45 @@ export const SocialProofSection: React.FC = () => {
   ];
 
   return (
-    <section
-      id="depoimentos"
-      className="py-24 text-white relative overflow-hidden bg-center bg-cover"
-      style={{ backgroundImage: `url(${depoimentosBackground})` }}
-    >
-      <div className="absolute inset-0 bg-brand-dark/60" />
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="bg-white text-brand-dark rounded-[32px] shadow-2xl border border-white/70 px-6 md:px-12 py-12">
-          <div className="grid gap-12 lg:grid-cols-3 text-center">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="flex flex-col items-center gap-6 px-2">
-                <div className="flex items-center justify-center w-full min-h-[72px]">
-                  {testimonial.logo.type === 'image' ? (
-                    <img
-                      src={testimonial.logo.value}
-                      alt={`Logo ${testimonial.company}`}
-                      className="h-full w-full object-contain"
-                    />
-                  ) : (
-                    <a
-                      href={testimonial.logo.link}
-                      className="text-2xl font-serif font-bold tracking-wide text-brand-dark text-center w-full"
-                    >
-                      {testimonial.logo.value}
-                    </a>
-                  )}
+    <>
+      <section id="depoimentos" className="pt-2.5 pb-16 bg-brand-dark">
+        <div className="container mx-auto px-6">
+          <div className="bg-white text-brand-dark rounded-[32px] shadow-2xl border border-white/70 px-6 md:px-12 py-12">
+            <div className="grid gap-12 lg:grid-cols-3 text-left items-start">
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.id} className="flex flex-col items-start gap-6 px-2">
+                  <div className="flex items-start justify-start w-full min-h-[72px]">
+                    {testimonial.logo.type === 'image' ? (
+                      <img
+                        src={testimonial.logo.value}
+                        alt={`Logo ${testimonial.company}`}
+                        className="h-full w-full object-contain"
+                      />
+                    ) : (
+                      <a
+                        href={testimonial.logo.link}
+                        className="text-2xl font-serif font-bold tracking-wide text-brand-dark text-left w-full"
+                      >
+                        {testimonial.logo.value}
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-base leading-relaxed text-brand-textDark/90 font-medium">
+                    {testimonial.quote}
+                  </p>
+                  <div className="text-sm text-brand-textDark font-semibold">{testimonial.author}</div>
                 </div>
-                <p className="text-base leading-relaxed text-brand-textDark/90 font-medium">
-                  {testimonial.quote}
-                </p>
-                <div className="text-sm text-brand-textDark font-semibold">{testimonial.author}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section
+        className="relative min-h-[320px] bg-center bg-cover"
+        style={{ backgroundImage: `url(${depoimentosBackground})` }}
+      >
+        <div className="absolute inset-0 bg-brand-dark/60" />
+      </section>
+    </>
   );
 };

@@ -7,7 +7,7 @@ import heroImage from '../assets/imagem-sessão-hero.png';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative w-full min-h-screen flex items-center overflow-hidden bg-brand-dark pt-20">
+    <section id="hero" className="relative w-full min-h-screen flex items-start overflow-hidden bg-brand-dark pt-2.5">
       {/* Background Gradient & Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/30 z-10 pointer-events-none" />
@@ -20,8 +20,8 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-brand-red/20 mix-blend-overlay"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-center min-h-[70vh]">
-        <div className="w-full md:w-3/5 lg:w-1/2 pt-10 md:pt-0">
+      <div className="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-start min-h-[70vh]">
+        <div className="w-full md:w-3/5 lg:w-1/2 pt-2.5">
           
           <div className="inline-block px-3 py-1 border border-brand-green/30 rounded-full bg-brand-green/10 mb-6 backdrop-blur-sm">
             <span className="text-brand-green text-xs font-bold tracking-[0.2em] uppercase">
