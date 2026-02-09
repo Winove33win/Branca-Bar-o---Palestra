@@ -33,7 +33,7 @@ export const SocialProofSection: React.FC = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-20">
+    <section id="depoimentos" className="min-h-screen bg-white py-20">
       <div className="container mx-auto px-6">
         <div className="bg-gradient-to-br from-white via-white to-brand-light/40 text-brand-dark rounded-[36px] shadow-2xl border border-white/70 px-6 md:px-12 py-12">
           <div className="grid gap-8 lg:grid-cols-3">
@@ -43,11 +43,11 @@ export const SocialProofSection: React.FC = () => {
                 className="flex h-full flex-col gap-6 rounded-3xl border border-brand-light/50 bg-white/90 p-6 text-center shadow-lg shadow-brand-dark/5"
               >
                 <div className="flex flex-col items-center gap-3">
-                  <div className="flex items-center justify-center w-full min-h-[72px]">
+                  <div className="flex items-center justify-center w-full min-h-[88px]">
                     <img
                       src={testimonial.logo}
                       alt={`Logo ${testimonial.company}`}
-                      className="h-16 w-auto object-contain"
+                      className="h-20 w-auto max-w-[180px] object-contain"
                     />
                   </div>
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-textDark/70">
@@ -65,7 +65,7 @@ export const SocialProofSection: React.FC = () => {
           </div>
         </div>
         <div
-          className="mt-10 h-40 md:h-56 bg-no-repeat bg-center bg-contain"
+          className="mt-10 h-64 md:h-80 lg:h-96 bg-no-repeat bg-center bg-cover"
           style={{ backgroundImage: `url(${depoimentosBackground})` }}
         />
       </div>
