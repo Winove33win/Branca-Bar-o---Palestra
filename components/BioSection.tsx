@@ -9,9 +9,9 @@ export const BioSection: React.FC = () => {
           <div className="w-full md:w-1/3">
              <div className="relative">
                 <div className="absolute top-4 left-4 w-full h-full border-2 border-brand-red rounded-full"></div>
-                <img 
-                  src="https://tse3.mm.bing.net/th/id/OIP.OqLZ4DoqefDXsmIsM6MHNQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" 
-                  alt="Branca Barão" 
+                <img
+                  src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80"
+                  alt="Branca Barão em estúdio de podcast"
                   className="rounded-full w-full aspect-square object-cover relative z-10 shadow-2xl border-4 border-white object-top"
                 />
              </div>
