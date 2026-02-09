@@ -2,7 +2,7 @@
 import React from 'react';
 
 export const Marquee: React.FC = () => {
-  const text = "LOREM IPSUM DOLOR SIT AMET • ";
+  const text = "Se diminuir não é uma opção! - Se encolher não ajuda o mundo - Autenticidade não machuca e nem ofende - Nossos resultados refletem nossa autenticidade - ";
   const repeatedText = Array(20).fill(text).join("");
 
   return (

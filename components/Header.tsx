@@ -17,10 +17,11 @@ export const Header: React.FC = () => {
   const navLinks = [
     { name: 'Início', href: '#hero' },
     { name: 'A Palestra', href: '#palestra' },
-    { name: 'Minha Entrega', href: '#entrega' },
-    { name: 'Transformação', href: '#transformacao' },
-    { name: 'Prova Social', href: '#depoimentos' },
+    { name: 'Sessão 03', href: '#sessao-03' },
+    { name: 'Impacto', href: '#impacto' },
+    { name: 'Depoimentos', href: '#depoimentos' },
     { name: 'A Palestrante', href: '#bio' },
+    { name: 'Empresas', href: '#logos' },
   ];
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
