@@ -48,11 +48,6 @@ export const SocialProofSection: React.FC = () => {
       className="py-24 text-white relative overflow-hidden"
       style={{ backgroundColor: '#130039' }}
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: `url(${depoimentosBackground})` }}
-      />
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-brand-light mb-4">
@@ -89,6 +84,14 @@ export const SocialProofSection: React.FC = () => {
               <div className="text-sm text-brand-green font-semibold">{testimonial.author}</div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16">
+          <img
+            src={depoimentosBackground}
+            alt="Mosaico de depoimentos"
+            className="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl border border-white/10"
+          />
         </div>
       </div>
     </section>
