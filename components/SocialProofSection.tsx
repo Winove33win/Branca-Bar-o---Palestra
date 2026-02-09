@@ -63,23 +63,23 @@ export const SocialProofSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-10 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-6 backdrop-blur-sm"
+              className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-6 backdrop-blur-sm shadow-lg"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center w-full min-h-[72px]">
                 {testimonial.logo.type === 'image' ? (
                   <img
                     src={testimonial.logo.value}
                     alt={`Logo ${testimonial.company}`}
-                    className="h-10 w-auto object-contain"
+                    className="h-full w-full object-contain"
                   />
                 ) : (
                   <a
                     href={testimonial.logo.link}
-                    className="text-2xl font-serif font-bold tracking-wide text-brand-light"
+                    className="text-2xl font-serif font-bold tracking-wide text-brand-light text-center w-full"
                   >
                     {testimonial.logo.value}
                   </a>
