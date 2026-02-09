@@ -13,15 +13,18 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/30 z-10 pointer-events-none" />
       
       {/* Hero Image Background */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src={heroImage}
+          alt=""
+          className="absolute inset-0 h-full w-full object-contain object-right"
+          aria-hidden="true"
+        />
         <div className="absolute inset-0 bg-brand-red/20 mix-blend-overlay"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-center min-h-[70vh]">
-        <div className="w-full md:w-3/5 lg:w-1/2 pt-10 md:pt-0">
+      <div className="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-start min-h-[75vh] md:min-h-[80vh]">
+        <div className="w-full md:w-1/2 lg:w-[45%] pt-6 md:pt-8 self-start">
           
           <div className="inline-block px-3 py-1 border border-brand-green/30 rounded-full bg-brand-green/10 mb-6 backdrop-blur-sm">
             <span className="text-brand-green text-xs font-bold tracking-[0.2em] uppercase">
@@ -37,7 +40,7 @@ export const Hero: React.FC = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light border-l-4 border-brand-green pl-6 max-w-xl shadow-black drop-shadow-md bg-brand-dark/20 backdrop-blur-sm py-2 rounded-r-lg">
+          <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light border-l-4 border-brand-green pl-6 max-w-lg shadow-black drop-shadow-md bg-brand-dark/20 backdrop-blur-sm py-2 rounded-r-lg">
             {HERO_DATA.subtitle}
           </p>
           
