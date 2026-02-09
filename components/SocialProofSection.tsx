@@ -43,13 +43,8 @@ export const SocialProofSection: React.FC = () => {
   ];
 
   return (
-    <section
-      id="depoimentos"
-      className="py-24 text-white relative overflow-hidden bg-center bg-cover"
-      style={{ backgroundImage: `url(${depoimentosBackground})` }}
-    >
-      <div className="absolute inset-0 bg-brand-dark/60" />
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="depoimentos" className="py-20">
+      <div className="container mx-auto px-6">
         <div className="bg-white text-brand-dark rounded-[32px] shadow-2xl border border-white/70 px-6 md:px-12 py-12">
           <div className="grid gap-12 lg:grid-cols-3 text-center">
             {testimonials.map((testimonial) => (
@@ -78,6 +73,10 @@ export const SocialProofSection: React.FC = () => {
             ))}
           </div>
         </div>
+        <div
+          className="mt-10 h-40 md:h-56 bg-no-repeat bg-center bg-contain"
+          style={{ backgroundImage: `url(${depoimentosBackground})` }}
+        />
       </div>
     </section>
   );
